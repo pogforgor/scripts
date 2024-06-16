@@ -1,5 +1,5 @@
 sudo apt update
 sudo apt install apache2
-sudo systemctl status apache2 (Verificando seu servidor Web)
-cd /var/www/html
-sudo nano index.html
+sudo systemctl status apache2
+sudo cp index.html /var/www/html/index.html
+sudo nano /var/www/html/index.html
