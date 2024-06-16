@@ -11,7 +11,7 @@ sudo a2ensite wordpress
 sudo systemctl reload apache2.service
 
 # Obter endereço IP e definir como variável
-IP_ADDRESS=$(ip a | grep -oE '192[0-9.]+')
+IP_ADDRESS=$(ip a | grep -oE '192[0-9.]+(?!255)' | head -n 1)
 
 # Copiar ficheiro de configuração e adaptá-lo ao IP atual da máquina
 sudo cp config-.php /etc/wordpress/config-$IP_ADDRESS.php
