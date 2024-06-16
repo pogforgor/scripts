@@ -14,4 +14,4 @@ sudo systemctl reload apache2.service
 IP_ADDRESS=$(ip a | grep -oE '192[0-9.]+')
 
 # Copiar ficheiro de configuração e adaptá-lo ao IP atual da máquina
-sudo cp config-.php /etc/wordpress/config-IP_ADDRESS.php
+sudo cp config-.php /etc/wordpress/config-$IP_ADDRESS.php
