@@ -11,7 +11,7 @@ CREATE DATABASE wordpress;
 CREATE USER 'wordpress'@'localhost' IDENTIFIED BY 'your_password';
 
 # Permissões
-GRANT ALL PRIVILEGES ON wordpress.* TO 'wp_user'@'localhost';
+GRANT ALL PRIVILEGES ON wordpress.* TO 'wordpress'@'localhost';
 FLUSH PRIVILEGES;
 EXIT;
 
