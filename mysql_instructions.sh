@@ -1,3 +1,4 @@
+
 # IGNORA LINHAS QUE COMEÇAM COM #
 # Entra como root: (sem prompt de password):
 sudo mysql -u root -p
@@ -15,3 +16,4 @@ FLUSH PRIVILEGES;
 EXIT;
 
 # Fim
+
