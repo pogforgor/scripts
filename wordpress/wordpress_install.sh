@@ -10,8 +10,8 @@ sudo a2ensite wordpress
 # Reiniciar o serviço do Apache
 sudo systemctl reload apache2.service
 
-# Obter endereço IP e definir como variável
-IP_ADDRESS=$(ip a | grep -oE '192[0-9.]+(?!255)' | head -n 1)
+# Obter endereço IP, excluir localhost e defini-lo como variável
+IP_ADDRESS=$(ip -o -4 addr show | grep -v "127.0.0.1" | awk '{print $4}' | cut -d/ -f1)
 
 # Copiar ficheiro de configuração e adaptá-lo ao IP atual da máquina
 sudo cp config-.php /etc/wordpress/config-$IP_ADDRESS.php
