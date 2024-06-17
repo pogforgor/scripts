@@ -1,5 +1,5 @@
 # Instalar WordPress
-sudo apt install wordpress
+sudo apt install wordpress -y
 
 # Substituir wordpress.conf com ficheiro "já configurado"
 sudo cp wordpress.conf /etc/apache2/sites-available/wordpress.conf
